@@ -31,5 +31,7 @@ describe 'band_pass_filter' do
     expect { band_pass_filter([true]) }.to raise_error 'sound waves not passed correctly'
   end
 
-
+  it "will return [30] if lower bound is set to 30" do
+    expect(band_pass_filter([1], 30)).to eq [30]
+  end
 end
