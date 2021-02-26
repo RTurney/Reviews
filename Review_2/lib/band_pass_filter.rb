@@ -1,5 +1,8 @@
+# band pass filter function
 def band_pass_filter(sound_wave)
-raise 'sound waves not passed correctly' unless sound_wave.is_a? Array
+
+  sound_wave_checker(sound_wave)
+
   filtered_sound_wave = []
   sound_wave.each do |frequency|
     if frequency < 40
@@ -10,5 +13,12 @@ raise 'sound waves not passed correctly' unless sound_wave.is_a? Array
       filtered_sound_wave.push(frequency)
     end
   end
-  return filtered_sound_wave
+  filtered_sound_wave
+end
+
+# will return errors if sound wave is incorrect
+def sound_wave_checker(sound_wave)
+  raise 'sound waves not passed correctly' unless sound_wave.is_a? Array
+
+  raise 'no frequency supplied' if sound_wave.empty?
 end
