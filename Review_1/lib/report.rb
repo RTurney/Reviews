@@ -17,15 +17,15 @@ def report(teacher_report)
 
   green_report = green_checker(green_num)
   amber_report = amber_checker(amber_num)
-  red_report = ''
-  return green_report + amber_report + red_report
+  red_report = red_checker(red_num)
+  return green_report + "\n" + amber_report + "\n" + red_report
 end
 
 def green_checker(green_num)
   if green_num == 0
     return ''
   else
-    return 'Green: ' + green_num.to_s + "\n"
+    return 'Green: ' + green_num.to_s
   end
 end
 
@@ -34,5 +34,13 @@ def amber_checker(amber_num)
     return ''
   else
     return "Amber: " + amber_num.to_s
+  end
+end
+
+def red_checker(red_num)
+  if red_num == 0
+    return ''
+  else
+    return "Red: " + red_num.to_s
   end
 end
