@@ -21,4 +21,10 @@ def sound_wave_checker(sound_wave)
   raise 'sound waves not passed correctly' unless sound_wave.is_a? Array
 
   raise 'no frequency supplied' if sound_wave.empty?
+
+  sound_wave.each do |frequency|
+    unless frequency.is_a? Integer 
+      raise 'sound waves not passed correctly'
+    end
+  end
 end

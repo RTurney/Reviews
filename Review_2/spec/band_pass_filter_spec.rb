@@ -19,10 +19,17 @@ describe 'band_pass_filter' do
   end
 
   it "will throw an error 'sound waves not passed correctly' if non-array passed in" do
-    expect{ band_pass_filter('string') }.to raise_error('sound waves not passed correctly')
+    expect{ band_pass_filter('string') }.to raise_error 'sound waves not passed correctly'
   end
 
   it "will throw an error if soundwave is empty" do
     expect { band_pass_filter([]) }.to raise_error 'no frequency supplied'
   end
+
+  it "will throw an error if array has non-integer types" do
+    expect { band_pass_filter(['a string']) }.to raise_error 'sound waves not passed correctly'
+    expect { band_pass_filter([true]) }.to raise_error 'sound waves not passed correctly'
+  end
+
+
 end

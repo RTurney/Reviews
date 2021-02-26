@@ -22,7 +22,7 @@ Input:
 array
 example =  [60,10,45,60,1500]
 
-- throw error "sound waves not passed correctly if not an array" if array is passed but wrong type is included
+- throw error "sound waves not passed correctly" if not an array if array is passed but wrong type is included
 - throw error if array empty ('no frequency supplied')
 
 soundwave/ array can be of any size
