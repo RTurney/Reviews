@@ -1,7 +1,7 @@
 # Spellchecker function
 
-def spellchecker(string)
-  dictionary = ['hello', 'world']
+def spellchecker(string, dictionary = ['hello', 'world'])
+  dictionary = dictionary
   word_array = string.split(' ')
 
   word_checker(word_array, dictionary).join(' ')

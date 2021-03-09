@@ -17,4 +17,8 @@ describe 'spellchecker' do
   it 'returns a string with incorrect words highlighted' do
     expect(spellchecker('helo world')).to eq '~helo~ world'
   end
+
+  it 'can accept a custom dictionary which replaces the default ome' do
+    expect(spellchecker('helo world', ['helo', 'world'])).to eq 'helo world'
+  end
 end
