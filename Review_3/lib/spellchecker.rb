@@ -1,5 +1,5 @@
 # Spellchecker function
 
 def spellchecker(string)
-  "hello"
+  string
 end
