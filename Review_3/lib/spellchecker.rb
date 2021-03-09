@@ -2,10 +2,14 @@
 
 def spellchecker(string)
   dictionary = ['hello', 'world']
-
   word_array = string.split(' ')
-  output_string = []
 
+  word_checker(word_array, dictionary).join(' ')
+end
+
+def word_checker(word_array, dictionary)
+
+  output_string = []
   word_array.each do |word|
     if dictionary.include?word
       output_string.push(word)
@@ -13,5 +17,5 @@ def spellchecker(string)
       output_string.push("~" + word + "~")
     end
   end
-  output_string.join(' ')
+  output_string
 end
