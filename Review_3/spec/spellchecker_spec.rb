@@ -13,4 +13,8 @@ describe 'spellchecker' do
   it 'returns any string other than "hello" that is correctly spelt' do
     expect(spellchecker('world')).to eq 'world'
   end
+
+  it 'returns a string with incorrect words highlighted' do
+    expect(spellchecker('helo world')).to eq '~helo~ world'
+  end
 end
