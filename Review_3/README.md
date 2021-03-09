@@ -21,7 +21,13 @@ Input | Output
 123 | "Incorrect input please enter a string" (potentially highlight specific inputted type)
 -----|-------
 "hello world", ['helo', 'world'] | "helo ~world~"
+-----|-------
+"Helo world" | "~Helo~ world"
 
 * Use a default dictionary as standard (for this test this will be hardcoded)
 
 * Can use a custom dictionary which replaces a normal dictionary
+
+* spellchecker is not case senstive
+
+* spellchecker preserves the case of inputted strings
