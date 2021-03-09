@@ -21,4 +21,8 @@ describe 'spellchecker' do
   it 'can accept a custom dictionary which replaces the default ome' do
     expect(spellchecker('helo world', ['helo', 'world'])).to eq 'helo world'
   end
+
+  it 'does not highlight words based on a difference in case' do
+    expect(spellchecker('HELLO WORLD')).to eq "HELLO WORLD"
+  end
 end

@@ -12,6 +12,8 @@ def word_checker(word_array, dictionary)
   word_array.each do |word|
     if dictionary.include?word
       output_string.push(word)
+    elsif dictionary.include? word.downcase
+      output_string.push(word)
     else
       output_string.push("~" + word + "~")
     end
