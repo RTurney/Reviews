@@ -19,7 +19,7 @@ describe 'band_pass_filter' do
   end
 
   it "will throw an error 'sound waves not passed correctly' if non-array passed in" do
-    expect{ band_pass_filter('string') }.to raise_error 'sound waves not passed correctly'
+    expect { band_pass_filter('string') }.to raise_error 'sound waves not passed correctly'
   end
 
   it "will throw an error if soundwave is empty" do
@@ -33,5 +33,9 @@ describe 'band_pass_filter' do
 
   it "will return [30] if lower bound is set to 30" do
     expect(band_pass_filter([1], 30)).to eq [30]
+  end
+
+  it "will return [2000] if upper bound is set to 2000" do
+    expect(band_pass_filter([2001], upper_limit = 2000)).to eq [2000]
   end
 end

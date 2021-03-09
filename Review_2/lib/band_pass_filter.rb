@@ -1,5 +1,5 @@
 # band pass filter function
-def band_pass_filter(sound_wave, lower_limit = 40)
+def band_pass_filter(sound_wave, lower_limit = 40, upper_limit = 1000)
 
   sound_wave_checker(sound_wave)
 
@@ -7,8 +7,8 @@ def band_pass_filter(sound_wave, lower_limit = 40)
   sound_wave.each do |frequency|
     if frequency < lower_limit
       filtered_sound_wave.push(lower_limit)
-    elsif frequency > 1000
-      filtered_sound_wave.push(1000)
+    elsif frequency > upper_limit
+      filtered_sound_wave.push(upper_limit)
     else
       filtered_sound_wave.push(frequency)
     end
