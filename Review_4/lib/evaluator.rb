@@ -5,10 +5,10 @@ def evaluator(sum)
   sum_components = sum.split(' ')
   number_array = []
   sum_components.each do |char|
-    if char.is_a? Numeric
+    if char == "1" || char == "2"
       number_array.push(char.to_i)
     end
   end
-  result = sum(number_array)
+  result = number_array[0] + number_array[1]
   [sum, result]
 end
