@@ -1,4 +1,4 @@
 
 def evaluator(sum)
-  ["1", 1]
+  [sum, 1]
 end
