@@ -13,4 +13,8 @@ describe 'evaluator' do
   it "will return ['1 + 1', 2] for '1 + 1'" do
     expect(evaluator("1 + 1")).to eq ["1 + 1", 2]
   end
+
+  it "will return ['1 + 2', 3] for '1 + 2'" do
+    expect(evaluator("1 + 2")).to eq ["1 + 2", 3]
+  end
 end
