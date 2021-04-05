@@ -1,0 +1,27 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/richardturney/Documents/Projects/Reviews/Review_4/spec/evaluator_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/richardturney/Documents/Projects/Reviews/Review_4/lib/evaluator.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1617632069
+  }
+}
