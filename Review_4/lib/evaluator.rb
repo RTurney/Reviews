@@ -2,8 +2,13 @@
 def evaluator(sum)
   return [sum, sum.to_i] if sum.length == 1
 
-  if sum == "1 + 2"
-    return [sum, 3]
+  sum_components = sum.split(' ')
+  number_array = []
+  sum_components.each do |char|
+    if char.is_a? Numeric
+      number_array.push(char.to_i)
+    end
   end
-  [sum, 2]
+  result = sum(number_array)
+  [sum, result]
 end
