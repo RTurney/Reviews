@@ -1,9 +1,8 @@
 
 def evaluator(sum)
-  if sum == "1 + 1"
-    return [sum, 2]
-  else
+  if sum.length == 1
     number_to_return = sum.to_i
-    [sum, number_to_return]
+    return [sum, number_to_return]
   end
+  [sum, 2]
 end
