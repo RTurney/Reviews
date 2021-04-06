@@ -1,5 +1,5 @@
 
-def evaluator(sum)
+def string_evaluator(sum)
   return [sum, sum.to_i] if sum.length == 1
 
   sum_components = sum.split(' ')
