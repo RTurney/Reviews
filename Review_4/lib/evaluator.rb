@@ -5,7 +5,7 @@ def evaluator(sum)
   sum_components = sum.split(' ')
   number_array = []
   sum_components.each do |char|
-    if char == "1" || char == "2"
+    unless char.to_i
       number_array.push(char.to_i)
     end
   end
